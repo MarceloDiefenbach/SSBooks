@@ -7,15 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF36F20E2906C4B0008BFCBF /* GraphQL in Frameworks */ = {isa = PBXBuildFile; productRef = DF36F20D2906C4B0008BFCBF /* GraphQL */; };
+		DF36F2112906C4CD008BFCBF /* SwiftGraphQL in Frameworks */ = {isa = PBXBuildFile; productRef = DF36F2102906C4CD008BFCBF /* SwiftGraphQL */; };
+		DF36F2142906C4EC008BFCBF /* SwiftGraphQLClient in Frameworks */ = {isa = PBXBuildFile; productRef = DF36F2132906C4EC008BFCBF /* SwiftGraphQLClient */; };
+		DF36F2172906CA56008BFCBF /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36F2162906CA56008BFCBF /* Book.swift */; };
+		DF36F2192906CA80008BFCBF /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36F2182906CA80008BFCBF /* Author.swift */; };
+		DF36F21C29080227008BFCBF /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF36F21B29080227008BFCBF /* Add.storyboard */; };
+		DF36F21E29080235008BFCBF /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36F21D29080235008BFCBF /* AddViewController.swift */; };
 		DF4A8F482905B2760098CC52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A8F472905B2760098CC52 /* AppDelegate.swift */; };
 		DF4A8F4A2905B2760098CC52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A8F492905B2760098CC52 /* SceneDelegate.swift */; };
 		DF4A8F4C2905B2760098CC52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A8F4B2905B2760098CC52 /* ViewController.swift */; };
 		DF4A8F4F2905B2760098CC52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4A8F4D2905B2760098CC52 /* Main.storyboard */; };
 		DF4A8F512905B2770098CC52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF4A8F502905B2770098CC52 /* Assets.xcassets */; };
 		DF4A8F542905B2770098CC52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4A8F522905B2770098CC52 /* LaunchScreen.storyboard */; };
+		DF4A8F5D2905B2B50098CC52 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4A8F5C2905B2B50098CC52 /* Home.storyboard */; };
+		DF4A8F5F2905B3000098CC52 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A8F5E2905B3000098CC52 /* HomeViewModel.swift */; };
+		DF4A8F612905B31C0098CC52 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A8F602905B31C0098CC52 /* HomeView.swift */; };
+		DF4A8F642905B34E0098CC52 /* BooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A8F632905B34E0098CC52 /* BooksTableViewCell.swift */; };
+		DF4A8F662905B35E0098CC52 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A8F652905B35E0098CC52 /* BookCollectionViewCell.swift */; };
+		DF4A8F6F2905B4420098CC52 /* getBooks.graphql in Resources */ = {isa = PBXBuildFile; fileRef = DF4A8F6E2905B4420098CC52 /* getBooks.graphql */; };
+		DF53F4B22908A29C00398A4A /* Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53F4B12908A29C00398A4A /* Queries.swift */; };
+		DF78B1CC2905CCFA008CFEDA /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = DF78B1CB2905CCF9008CFEDA /* schema.json */; };
+		DF8537AB29088573007E235B /* LibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8537AA29088573007E235B /* LibraryCollectionViewCell.swift */; };
+		DF8537AD2908858C007E235B /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8537AC2908858C007E235B /* LibraryTableViewCell.swift */; };
+		DFCDB09429080E8300D9A966 /* AuthorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDB09329080E8300D9A966 /* AuthorsTableViewCell.swift */; };
+		DFCDB0962908108600D9A966 /* AuthorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDB0952908108600D9A966 /* AuthorCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF36F2162906CA56008BFCBF /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		DF36F2182906CA80008BFCBF /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		DF36F21B29080227008BFCBF /* Add.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
+		DF36F21D29080235008BFCBF /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		DF4A8F442905B2760098CC52 /* StudioSolTestBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudioSolTestBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4A8F472905B2760098CC52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF4A8F492905B2760098CC52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +47,18 @@
 		DF4A8F502905B2770098CC52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF4A8F532905B2770098CC52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF4A8F552905B2770098CC52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF4A8F5C2905B2B50098CC52 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		DF4A8F5E2905B3000098CC52 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DF4A8F602905B31C0098CC52 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DF4A8F632905B34E0098CC52 /* BooksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCell.swift; sourceTree = "<group>"; };
+		DF4A8F652905B35E0098CC52 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF4A8F6E2905B4420098CC52 /* getBooks.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = getBooks.graphql; sourceTree = "<group>"; };
+		DF53F4B12908A29C00398A4A /* Queries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queries.swift; sourceTree = "<group>"; };
+		DF78B1CB2905CCF9008CFEDA /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		DF8537AA29088573007E235B /* LibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF8537AC2908858C007E235B /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
+		DFCDB09329080E8300D9A966 /* AuthorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsTableViewCell.swift; sourceTree = "<group>"; };
+		DFCDB0952908108600D9A966 /* AuthorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +66,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF36F2112906C4CD008BFCBF /* SwiftGraphQL in Frameworks */,
+				DF36F20E2906C4B0008BFCBF /* GraphQL in Frameworks */,
+				DF36F2142906C4EC008BFCBF /* SwiftGraphQLClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF36F2152906CA4D008BFCBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF36F2162906CA56008BFCBF /* Book.swift */,
+				DF36F2182906CA80008BFCBF /* Author.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DF36F21A2908021A008BFCBF /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				DF36F21B29080227008BFCBF /* Add.storyboard */,
+				DF36F21D29080235008BFCBF /* AddViewController.swift */,
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
 		DF4A8F3B2905B2760098CC52 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +112,12 @@
 		DF4A8F462905B2760098CC52 /* StudioSolTestBooks */ = {
 			isa = PBXGroup;
 			children = (
+				DF53F4B02908A29100398A4A /* New Group */,
+				DF36F2152906CA4D008BFCBF /* Model */,
+				DF78B1CB2905CCF9008CFEDA /* schema.json */,
+				DF4A8F672905B4160098CC52 /* GraphQL */,
+				DF36F21A2908021A008BFCBF /* Find */,
+				DF4A8F5B2905B2AD0098CC52 /* Home */,
 				DF4A8F472905B2760098CC52 /* AppDelegate.swift */,
 				DF4A8F492905B2760098CC52 /* SceneDelegate.swift */,
 				DF4A8F4B2905B2760098CC52 /* ViewController.swift */,
@@ -65,6 +127,46 @@
 				DF4A8F552905B2770098CC52 /* Info.plist */,
 			);
 			path = StudioSolTestBooks;
+			sourceTree = "<group>";
+		};
+		DF4A8F5B2905B2AD0098CC52 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DF4A8F622905B3380098CC52 /* Cells */,
+				DF4A8F5C2905B2B50098CC52 /* Home.storyboard */,
+				DF4A8F5E2905B3000098CC52 /* HomeViewModel.swift */,
+				DF4A8F602905B31C0098CC52 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DF4A8F622905B3380098CC52 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DF4A8F632905B34E0098CC52 /* BooksTableViewCell.swift */,
+				DF4A8F652905B35E0098CC52 /* BookCollectionViewCell.swift */,
+				DFCDB09329080E8300D9A966 /* AuthorsTableViewCell.swift */,
+				DFCDB0952908108600D9A966 /* AuthorCollectionViewCell.swift */,
+				DF8537AA29088573007E235B /* LibraryCollectionViewCell.swift */,
+				DF8537AC2908858C007E235B /* LibraryTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DF4A8F672905B4160098CC52 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				DF4A8F6E2905B4420098CC52 /* getBooks.graphql */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		DF53F4B02908A29100398A4A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				DF53F4B12908A29C00398A4A /* Queries.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +185,11 @@
 			dependencies = (
 			);
 			name = StudioSolTestBooks;
+			packageProductDependencies = (
+				DF36F20D2906C4B0008BFCBF /* GraphQL */,
+				DF36F2102906C4CD008BFCBF /* SwiftGraphQL */,
+				DF36F2132906C4EC008BFCBF /* SwiftGraphQLClient */,
+			);
 			productName = StudioSolTestBooks;
 			productReference = DF4A8F442905B2760098CC52 /* StudioSolTestBooks.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +218,11 @@
 				Base,
 			);
 			mainGroup = DF4A8F3B2905B2760098CC52;
+			packageReferences = (
+				DF36F20C2906C4B0008BFCBF /* XCRemoteSwiftPackageReference "swift-graphql" */,
+				DF36F20F2906C4CD008BFCBF /* XCRemoteSwiftPackageReference "swift-graphql" */,
+				DF36F2122906C4EC008BFCBF /* XCRemoteSwiftPackageReference "swift-graphql" */,
+			);
 			productRefGroup = DF4A8F452905B2760098CC52 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +237,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF36F21C29080227008BFCBF /* Add.storyboard in Resources */,
 				DF4A8F542905B2770098CC52 /* LaunchScreen.storyboard in Resources */,
 				DF4A8F512905B2770098CC52 /* Assets.xcassets in Resources */,
 				DF4A8F4F2905B2760098CC52 /* Main.storyboard in Resources */,
+				DF4A8F5D2905B2B50098CC52 /* Home.storyboard in Resources */,
+				DF78B1CC2905CCFA008CFEDA /* schema.json in Resources */,
+				DF4A8F6F2905B4420098CC52 /* getBooks.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +254,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF36F2172906CA56008BFCBF /* Book.swift in Sources */,
+				DF8537AD2908858C007E235B /* LibraryTableViewCell.swift in Sources */,
+				DFCDB09429080E8300D9A966 /* AuthorsTableViewCell.swift in Sources */,
+				DF4A8F642905B34E0098CC52 /* BooksTableViewCell.swift in Sources */,
 				DF4A8F4C2905B2760098CC52 /* ViewController.swift in Sources */,
+				DF53F4B22908A29C00398A4A /* Queries.swift in Sources */,
+				DF36F2192906CA80008BFCBF /* Author.swift in Sources */,
 				DF4A8F482905B2760098CC52 /* AppDelegate.swift in Sources */,
+				DF36F21E29080235008BFCBF /* AddViewController.swift in Sources */,
 				DF4A8F4A2905B2760098CC52 /* SceneDelegate.swift in Sources */,
+				DF8537AB29088573007E235B /* LibraryCollectionViewCell.swift in Sources */,
+				DF4A8F662905B35E0098CC52 /* BookCollectionViewCell.swift in Sources */,
+				DF4A8F612905B31C0098CC52 /* HomeView.swift in Sources */,
+				DF4A8F5F2905B3000098CC52 /* HomeViewModel.swift in Sources */,
+				DFCDB0962908108600D9A966 /* AuthorCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +486,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF36F20C2906C4B0008BFCBF /* XCRemoteSwiftPackageReference "swift-graphql" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maticzav/swift-graphql/";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		DF36F20F2906C4CD008BFCBF /* XCRemoteSwiftPackageReference "swift-graphql" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maticzav/swift-graphql/";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		DF36F2122906C4EC008BFCBF /* XCRemoteSwiftPackageReference "swift-graphql" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maticzav/swift-graphql/";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF36F20D2906C4B0008BFCBF /* GraphQL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF36F20C2906C4B0008BFCBF /* XCRemoteSwiftPackageReference "swift-graphql" */;
+			productName = GraphQL;
+		};
+		DF36F2102906C4CD008BFCBF /* SwiftGraphQL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF36F20C2906C4B0008BFCBF /* XCRemoteSwiftPackageReference "swift-graphql" */;
+			productName = SwiftGraphQL;
+		};
+		DF36F2132906C4EC008BFCBF /* SwiftGraphQLClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF36F20C2906C4B0008BFCBF /* XCRemoteSwiftPackageReference "swift-graphql" */;
+			productName = SwiftGraphQLClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF4A8F3C2905B2760098CC52 /* Project object */;
 }
