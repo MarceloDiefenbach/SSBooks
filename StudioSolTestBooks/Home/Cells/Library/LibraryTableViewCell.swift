@@ -38,6 +38,10 @@ class LibraryTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColle
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
 
 }
 

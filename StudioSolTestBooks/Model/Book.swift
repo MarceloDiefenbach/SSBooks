@@ -12,5 +12,6 @@ struct Book: Codable {
     var name: String?
     var author: Author?
     var cover: String?
+    var description: String?
     
 }

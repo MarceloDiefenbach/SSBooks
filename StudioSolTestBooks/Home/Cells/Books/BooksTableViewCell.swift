@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol BookDetailsDelegate: AnyObject {
+    
+    func showBookDetails(book: Book)
+}
+
 class BooksTableViewCell: UITableViewCell,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var viewModel = HomeViewModel()
+    var delegate: BookDetailsDelegate!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -26,7 +32,7 @@ class BooksTableViewCell: UITableViewCell,UICollectionViewDelegate, UICollection
                 self.collectionView.reloadData()
             }
         })
-
+        
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -34,32 +40,20 @@ class BooksTableViewCell: UITableViewCell,UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.books.count 
+        return viewModel.books.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bookCollectionCell", for: indexPath) as! BookCollectionViewCell
-        cell.titleLabel.text = self.viewModel.books[indexPath.row].name
-        cell.subtitleLable.text = self.viewModel.books[indexPath.row].author?.name
-        
-        getImageFromAPI(urlString: self.viewModel.books[indexPath.row].cover ?? "", completionHandler: {(image) in
-            cell.coverImage.image = image
-        })
-        
-        cell.setCorner()
+
+        cell.book = self.viewModel.books[indexPath.row]
+        cell.setCellLayoutAndData()
         
         return cell
     }
     
-    func getImageFromAPI (urlString: String, completionHandler: @escaping (UIImage) -> Void) {
-        guard let url = URL(string: urlString) else {return}
-        
-        DispatchQueue.global(qos: .background).async {
-            guard let image = try? Data(contentsOf: url) else { return }
-            DispatchQueue.main.async {
-                completionHandler(UIImage(data: image)!)
-            }
-        }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate.showBookDetails(book: self.viewModel.books[indexPath.row])
     }
     
 }

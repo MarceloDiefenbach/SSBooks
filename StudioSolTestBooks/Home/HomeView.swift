@@ -28,6 +28,7 @@ class HomeView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         
         self.viewModel.getAllBooks(completionHandler: { (response) in
             DispatchQueue.main.async {
@@ -104,6 +105,8 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "booksCell") as! BooksTableViewCell
+            cell.delegate = self
+            cell.selectionStyle = .none
             
             return cell
             
@@ -111,10 +114,13 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "AuthorsCell") as! AuthorsTableViewCell
             
             cell.authors = viewModel.authors
+            cell.selectionStyle = .none
+            
             return cell
             
         } else if indexPath.row == 2 {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "LibraryCell") as! LibraryTableViewCell
+            cell.selectionStyle = .none
             
             return cell
             
@@ -128,6 +134,7 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
             getImageFromAPI(urlString: book.cover ?? "", completionHandler: {(image) in
                 cell.cover.image = image
             })
+            cell.selectionStyle = .none
             
             return cell
         }
@@ -151,6 +158,15 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row > 2 {
+            print(viewModel.allBooks[indexPath.row-3])
+            performSegue(withIdentifier: "showBookDetails", sender: viewModel.allBooks[indexPath.row-3])
+            
+        }
+    }
+    
     func getImageFromAPI (urlString: String, completionHandler: @escaping (UIImage) -> Void) {
         guard let url = URL(string: urlString) else {return}
         
@@ -162,6 +178,21 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+}
+
+//MARK: - segues
+extension HomeView: BookDetailsDelegate {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          if (segue.identifier == "showBookDetails"){
+            let displayVC = segue.destination as! BookDetailsViewController
+              displayVC.book = sender as? Book
+          }
+      }
+    
+    func showBookDetails(book: Book) {
+        performSegue(withIdentifier: "showBookDetails", sender: book)
+    }
 }
 
 //MARK: - custom border radius

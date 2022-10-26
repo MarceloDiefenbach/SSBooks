@@ -22,6 +22,7 @@ enum RequestQuery {
                       favoriteBooks {
                         name
                         cover
+                        description
                         author {
                           name
                         }
@@ -50,6 +51,7 @@ enum RequestQuery {
                       allBooks {
                         name
                         cover
+                        description
                         author {
                           name
                         }

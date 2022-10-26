@@ -16,13 +16,12 @@ class HomeViewModel: ObservableObject {
     @Published var books: [Book] = []
     @Published var authors: [Author] = []
     @Published var allBooks: [Book] = []
+    private var subscriptions: Set<AnyCancellable> = []
     
     let segmentedControlFirst = "Meus Livros"
     let segmentedControlSecond = "Emprestados"
     
     let url = "https://us-central1-ss-devops.cloudfunctions.net/GraphQL"
-    
-    private var subscriptions: Set<AnyCancellable> = []
     
     func getFavoriteBooks(completionHandler: @escaping ([Book]) -> Void) {
         
@@ -44,7 +43,8 @@ class HomeViewModel: ObservableObject {
                 for dataIntern in data {
                     
                     if let name = (dataIntern as! [String:Any])["name"] as? String,
-                       let cover = (dataIntern as! [String:Any])["cover"] as? String {
+                       let cover = (dataIntern as! [String:Any])["cover"] as? String,
+                       let description = (dataIntern as! [String:Any])["description"] as? String {
                         
                         let author = (dataIntern as! [String:Any])["author"]
                         
@@ -55,7 +55,8 @@ class HomeViewModel: ObservableObject {
                                 author: Author(
                                     name: authorName
                                 ),
-                                cover: cover
+                                cover: cover,
+                                description: description
                             )
                             books.append(book)
                             
@@ -129,7 +130,8 @@ class HomeViewModel: ObservableObject {
                 for dataIntern in data {
                     
                     if let name = (dataIntern as! [String:Any])["name"] as? String,
-                       let cover = (dataIntern as! [String:Any])["cover"] as? String {
+                       let cover = (dataIntern as! [String:Any])["cover"] as? String,
+                       let description = (dataIntern as! [String:Any])["description"] as? String {
                         
                         let author = (dataIntern as! [String:Any])["author"]
                         
@@ -140,7 +142,8 @@ class HomeViewModel: ObservableObject {
                                 author: Author(
                                     name: authorName
                                 ),
-                                cover: cover
+                                cover: cover,
+                                description: description
                             )
                             books.append(book)
                             
