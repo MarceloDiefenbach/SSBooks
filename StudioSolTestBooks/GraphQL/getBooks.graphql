@@ -1,8 +1,0 @@
-query getBooks {
-  favoriteBooks {
-    name
-    author {
-      name
-    }
-  }
-}

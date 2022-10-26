@@ -25,9 +25,8 @@
 		DF4A8F612905B31C0098CC52 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A8F602905B31C0098CC52 /* HomeView.swift */; };
 		DF4A8F642905B34E0098CC52 /* BooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A8F632905B34E0098CC52 /* BooksTableViewCell.swift */; };
 		DF4A8F662905B35E0098CC52 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A8F652905B35E0098CC52 /* BookCollectionViewCell.swift */; };
-		DF4A8F6F2905B4420098CC52 /* getBooks.graphql in Resources */ = {isa = PBXBuildFile; fileRef = DF4A8F6E2905B4420098CC52 /* getBooks.graphql */; };
 		DF53F4B22908A29C00398A4A /* Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53F4B12908A29C00398A4A /* Queries.swift */; };
-		DF78B1CC2905CCFA008CFEDA /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = DF78B1CB2905CCF9008CFEDA /* schema.json */; };
+		DF53F4BA2908A60E00398A4A /* BookHorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53F4B82908A60E00398A4A /* BookHorizontalTableViewCell.swift */; };
 		DF8537AB29088573007E235B /* LibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8537AA29088573007E235B /* LibraryCollectionViewCell.swift */; };
 		DF8537AD2908858C007E235B /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8537AC2908858C007E235B /* LibraryTableViewCell.swift */; };
 		DFCDB09429080E8300D9A966 /* AuthorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDB09329080E8300D9A966 /* AuthorsTableViewCell.swift */; };
@@ -52,9 +51,8 @@
 		DF4A8F602905B31C0098CC52 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DF4A8F632905B34E0098CC52 /* BooksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCell.swift; sourceTree = "<group>"; };
 		DF4A8F652905B35E0098CC52 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
-		DF4A8F6E2905B4420098CC52 /* getBooks.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = getBooks.graphql; sourceTree = "<group>"; };
 		DF53F4B12908A29C00398A4A /* Queries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queries.swift; sourceTree = "<group>"; };
-		DF78B1CB2905CCF9008CFEDA /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		DF53F4B82908A60E00398A4A /* BookHorizontalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHorizontalTableViewCell.swift; sourceTree = "<group>"; };
 		DF8537AA29088573007E235B /* LibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF8537AC2908858C007E235B /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 		DFCDB09329080E8300D9A966 /* AuthorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsTableViewCell.swift; sourceTree = "<group>"; };
@@ -112,10 +110,8 @@
 		DF4A8F462905B2760098CC52 /* StudioSolTestBooks */ = {
 			isa = PBXGroup;
 			children = (
-				DF53F4B02908A29100398A4A /* New Group */,
+				DF53F4B02908A29100398A4A /* GraphQL */,
 				DF36F2152906CA4D008BFCBF /* Model */,
-				DF78B1CB2905CCF9008CFEDA /* schema.json */,
-				DF4A8F672905B4160098CC52 /* GraphQL */,
 				DF36F21A2908021A008BFCBF /* Find */,
 				DF4A8F5B2905B2AD0098CC52 /* Home */,
 				DF4A8F472905B2760098CC52 /* AppDelegate.swift */,
@@ -143,30 +139,47 @@
 		DF4A8F622905B3380098CC52 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				DF4A8F632905B34E0098CC52 /* BooksTableViewCell.swift */,
-				DF4A8F652905B35E0098CC52 /* BookCollectionViewCell.swift */,
-				DFCDB09329080E8300D9A966 /* AuthorsTableViewCell.swift */,
-				DFCDB0952908108600D9A966 /* AuthorCollectionViewCell.swift */,
-				DF8537AA29088573007E235B /* LibraryCollectionViewCell.swift */,
-				DF8537AC2908858C007E235B /* LibraryTableViewCell.swift */,
+				DF53F4B52908A5A700398A4A /* Library */,
+				DF53F4B42908A59E00398A4A /* Authors */,
+				DF53F4B32908A58E00398A4A /* Books */,
+				DF53F4B82908A60E00398A4A /* BookHorizontalTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		DF4A8F672905B4160098CC52 /* GraphQL */ = {
-			isa = PBXGroup;
-			children = (
-				DF4A8F6E2905B4420098CC52 /* getBooks.graphql */,
-			);
-			path = GraphQL;
-			sourceTree = "<group>";
-		};
-		DF53F4B02908A29100398A4A /* New Group */ = {
+		DF53F4B02908A29100398A4A /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
 				DF53F4B12908A29C00398A4A /* Queries.swift */,
 			);
-			path = "New Group";
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		DF53F4B32908A58E00398A4A /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				DF4A8F632905B34E0098CC52 /* BooksTableViewCell.swift */,
+				DF4A8F652905B35E0098CC52 /* BookCollectionViewCell.swift */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		DF53F4B42908A59E00398A4A /* Authors */ = {
+			isa = PBXGroup;
+			children = (
+				DFCDB09329080E8300D9A966 /* AuthorsTableViewCell.swift */,
+				DFCDB0952908108600D9A966 /* AuthorCollectionViewCell.swift */,
+			);
+			path = Authors;
+			sourceTree = "<group>";
+		};
+		DF53F4B52908A5A700398A4A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DF8537AA29088573007E235B /* LibraryCollectionViewCell.swift */,
+				DF8537AC2908858C007E235B /* LibraryTableViewCell.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,8 +255,6 @@
 				DF4A8F512905B2770098CC52 /* Assets.xcassets in Resources */,
 				DF4A8F4F2905B2760098CC52 /* Main.storyboard in Resources */,
 				DF4A8F5D2905B2B50098CC52 /* Home.storyboard in Resources */,
-				DF78B1CC2905CCFA008CFEDA /* schema.json in Resources */,
-				DF4A8F6F2905B4420098CC52 /* getBooks.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +277,7 @@
 				DF4A8F4A2905B2760098CC52 /* SceneDelegate.swift in Sources */,
 				DF8537AB29088573007E235B /* LibraryCollectionViewCell.swift in Sources */,
 				DF4A8F662905B35E0098CC52 /* BookCollectionViewCell.swift in Sources */,
+				DF53F4BA2908A60E00398A4A /* BookHorizontalTableViewCell.swift in Sources */,
 				DF4A8F612905B31C0098CC52 /* HomeView.swift in Sources */,
 				DF4A8F5F2905B3000098CC52 /* HomeViewModel.swift in Sources */,
 				DFCDB0962908108600D9A966 /* AuthorCollectionViewCell.swift in Sources */,

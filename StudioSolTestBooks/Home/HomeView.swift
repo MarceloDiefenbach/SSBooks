@@ -15,25 +15,25 @@ class HomeView: UIViewController {
     }
     
     var viewModel = HomeViewModel()
-    
     var segmentedControl: SegmentedControlOptions = .myBooks
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var topBackground: UIView!
-    
     @IBOutlet weak var myBooksSegmentedControl: UIView!
     @IBOutlet weak var segmentedControlFirst: UILabel!
     @IBOutlet weak var segmentedMarkFirst: UIView!
-    
-    
     @IBOutlet weak var borroweSegmentedControl: UIView!
     @IBOutlet weak var segmentedControlSecond: UILabel!
     @IBOutlet weak var segmentedMarkSecond: UIView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.viewModel.getAllBooks(completionHandler: { (response) in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        })
         
         topBackground.roundCorners(corners: [.bottomRight], radius: 32)
         topBackground.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
@@ -50,7 +50,6 @@ class HomeView: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.layer.backgroundColor = UIColor.systemGray6.cgColor
     }
     
     
@@ -96,7 +95,7 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if segmentedControl == .myBooks {
-            return 4 + viewModel.allBooks.count
+            return 3 + viewModel.allBooks.count
         } else {
             return 0
         }
@@ -120,9 +119,46 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
             return cell
             
         } else {
-            let cell = self.tableView.dequeueReusableCell(withIdentifier: "LibraryCell") as! LibraryTableViewCell
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "BookCell") as! BookHorizontalTableViewCell
+            
+            let book = viewModel.allBooks[indexPath.row-3]
+            
+            cell.title.text = book.name
+            cell.subtitle.text = book.author?.name
+            getImageFromAPI(urlString: book.cover ?? "", completionHandler: {(image) in
+                cell.cover.image = image
+            })
             
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            
+            return 386
+            
+        } else if indexPath.row == 1 {
+            
+            return 150
+            
+        } else if indexPath.row == 2 {
+            
+            return 120
+            
+        } else {
+            return 90
+        }
+    }
+    
+    func getImageFromAPI (urlString: String, completionHandler: @escaping (UIImage) -> Void) {
+        guard let url = URL(string: urlString) else {return}
+        
+        DispatchQueue.global(qos: .background).async {
+            guard let image = try? Data(contentsOf: url) else { return }
+            DispatchQueue.main.async {
+                completionHandler(UIImage(data: image)!)
+            }
         }
     }
     

@@ -9,7 +9,7 @@ import UIKit
 
 class AuthorCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var stack: UIStackView!
+    @IBOutlet weak var background: UIView!
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLable: UILabel!
@@ -25,9 +25,10 @@ class AuthorCollectionViewCell: UICollectionViewCell {
     }
     
     func setCorner() {
-        stack.layer.cornerRadius = 8
-        stack.layer.borderColor = UIColor.systemGray2.cgColor
-        stack.layer.borderWidth = 0.5
+        background.layer.cornerRadius = 8
+        background.layer.borderColor = UIColor.systemGray2.cgColor
+        background.layer.borderWidth = 0.5
         coverImage.layer.cornerRadius = 8
     }
+    
 }

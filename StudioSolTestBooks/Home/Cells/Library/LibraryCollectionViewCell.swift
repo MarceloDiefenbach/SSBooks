@@ -17,7 +17,7 @@ class LibraryCollectionViewCell: UICollectionViewCell {
     }
     
     func setLayout() {
-        self.background.layer.cornerRadius = 8
+        self.background.layer.cornerRadius = background.bounds.height/2
     }
     
     func setDisabledTags() {

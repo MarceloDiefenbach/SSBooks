@@ -4,6 +4,8 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +22,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="BAP-h4-wQ9" kind="relationship" relationship="viewControllers" id="eBd-79-u37"/>
-                        <segue destination="Auw-x3-F4U" kind="relationship" relationship="viewControllers" id="mTd-IF-EVN"/>
+                        <segue destination="EG6-GU-8q3" kind="relationship" relationship="viewControllers" id="j0r-Yt-94L"/>
+                        <segue destination="lTI-gL-D6V" kind="relationship" relationship="viewControllers" id="TQZ-JZ-tZG"/>
+                        <segue destination="t2n-rC-Z6n" kind="relationship" relationship="viewControllers" id="eNO-OZ-h4i"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAv-hF-RwZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -37,22 +41,65 @@
             </objects>
             <point key="canvasLocation" x="-908" y="68"/>
         </scene>
-        <!--Add-->
-        <scene sceneID="jAy-vF-xd2">
+        <!--Adicionar-->
+        <scene sceneID="qn3-mP-bZG">
             <objects>
-                <viewControllerPlaceholder storyboardName="Add" id="Auw-x3-F4U" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Adicionar" image="plus.circle.fill" catalog="system" id="LJW-2W-OOc"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lUt-V3-NJm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="EG6-GU-8q3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ELL-dJ-dUF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7Wd-V7-Txk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Adicionar" image="plus.circle.fill" catalog="system" id="AVd-0W-sQR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zk6-JY-BbV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-911" y="182"/>
+            <point key="canvasLocation" x="-400" y="-230"/>
+        </scene>
+        <!--Favoritos-->
+        <scene sceneID="465-cT-NPC">
+            <objects>
+                <viewController id="t2n-rC-Z6n" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mLB-g1-uq0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WIX-D4-Qv5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="heart.fill" catalog="system" id="SHH-Re-weH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="00C-70-FUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400" y="1137"/>
+        </scene>
+        <!--Buscar-->
+        <scene sceneID="GPY-MW-FKj">
+            <objects>
+                <viewController id="lTI-gL-D6V" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iop-Wb-3eu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KV8-uA-hWN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Buscar" image="magnifyingglass" catalog="system" id="c3h-v8-Cli"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hj2-gA-9eh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400" y="451"/>
         </scene>
     </scenes>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="primaryColor">
-            <color red="0.627" green="0.46300000000000002" blue="0.94899999999999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.62699997425079346" green="0.46299999952316284" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
