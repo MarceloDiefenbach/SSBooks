@@ -13,12 +13,36 @@ class BookDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tableView: UITableView!
     var book: Book?
     
+    @IBAction func swipeBackAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.contentInsetAdjustmentBehavior = .never
         
+        var frame = self.view.bounds
+        frame.origin.y = -frame.size.height
+        let primary = UIView(frame: frame)
+        primary.tag = 3
+        primary.backgroundColor = UIColor.black
+        self.tableView.addSubview(primary)
+
+        let widthConstraint = NSLayoutConstraint(item: primary, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1, constant: 0)
+        let centerX = NSLayoutConstraint(item: primary, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0)
+
+        NSLayoutConstraint.deactivate(primary.constraints)
+        NSLayoutConstraint.activate([
+            widthConstraint, centerX
+        ])
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

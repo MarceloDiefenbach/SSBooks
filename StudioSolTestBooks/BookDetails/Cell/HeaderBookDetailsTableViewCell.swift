@@ -15,7 +15,6 @@ class HeaderBookDetailsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var backgroundCircular: UIView!
-    @IBOutlet weak var optionsButton: UIButton!
     
     var delegate: BookDetailsViewDelegate!
     var book: Book?
@@ -24,7 +23,6 @@ class HeaderBookDetailsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         backgroundCircular.roundCorners(corners: [.topLeft], radius: 20)
-        self.optionsButton.transform = self.optionsButton.transform.rotated(by: CGFloat(90))
         
     }
     

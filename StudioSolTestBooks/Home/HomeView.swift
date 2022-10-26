@@ -48,8 +48,28 @@ class HomeView: UIViewController {
         addActionOnMyBooksSegmentedControl()
         addActionOnBorrowedSegmentedControl()
         
+        segmentedMarkFirst.layer.cornerRadius = segmentedMarkFirst.bounds.height/2
+        segmentedMarkSecond.layer.cornerRadius = segmentedMarkSecond.bounds.height/2
+        
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundView = nil;
+        tableView.backgroundColor = UIColor.white
+        
+        var frame = self.view.bounds
+        frame.origin.y = -frame.size.height
+        let primary = UIView(frame: frame)
+        primary.tag = 3
+        primary.backgroundColor = UIColor.systemGray6
+        self.tableView.addSubview(primary)
+
+        let widthConstraint = NSLayoutConstraint(item: primary, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1, constant: 0)
+        let centerX = NSLayoutConstraint(item: primary, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0)
+
+        NSLayoutConstraint.deactivate(primary.constraints)
+        NSLayoutConstraint.activate([
+            widthConstraint, centerX
+        ])
         
     }
     
