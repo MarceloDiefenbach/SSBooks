@@ -21,10 +21,10 @@ class LibraryCollectionViewCell: UICollectionViewCell {
     }
     
     func setDisabledTags() {
-        self.background.layer.backgroundColor = UIColor.white.cgColor
+        self.background.layer.backgroundColor = UIColor(named: "white")?.cgColor
         self.background.layer.borderWidth = 1
-        self.background.layer.borderColor = UIColor.systemGray2.cgColor
-        self.label.textColor = UIColor.systemGray
+        self.background.layer.borderColor = UIColor.systemGray.cgColor
+        self.label.textColor = UIColor(named: "gray")
     }
     
 }

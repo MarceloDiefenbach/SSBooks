@@ -28,7 +28,7 @@ class AuthorsTableViewCell: UITableViewCell,UICollectionViewDelegate, UICollecti
     }
     
     func setLayout() {
-        collectionView.layer.backgroundColor = UIColor.white.cgColor
+        collectionView.layer.backgroundColor = UIColor(named: "white")?.cgColor
         
         collectionView.dataSource = self
         collectionView.delegate = self

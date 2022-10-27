@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--TabBar-->
         <scene sceneID="ddz-vA-6sD">
             <objects>
-                <tabBarController id="9vT-GJ-xjx" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="h7o-p8-6jK">
+                <tabBarController title="TabBar" id="9vT-GJ-xjx" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h7o-p8-6jK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" name="primaryColor"/>
+                        <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="BAP-h4-wQ9" kind="relationship" relationship="viewControllers" id="eBd-79-u37"/>
@@ -46,7 +46,7 @@
             <objects>
                 <viewController id="EG6-GU-8q3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ELL-dJ-dUF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="7Wd-V7-Txk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -62,7 +62,7 @@
             <objects>
                 <viewController id="t2n-rC-Z6n" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mLB-g1-uq0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="WIX-D4-Qv5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -78,7 +78,7 @@
             <objects>
                 <viewController id="lTI-gL-D6V" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iop-Wb-3eu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="KV8-uA-hWN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

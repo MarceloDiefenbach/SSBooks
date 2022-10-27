@@ -22,7 +22,7 @@ class BooksTableViewCell: UITableViewCell,UICollectionViewDelegate, UICollection
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        collectionView.layer.backgroundColor = UIColor.systemGray6.cgColor
+//        collectionView.layer.backgroundColor = UIColor.systemGray6.cgColor
         
         collectionView.dataSource = self
         collectionView.delegate = self

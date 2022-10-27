@@ -140,6 +140,9 @@ A ideia de Simon é fingir que a corteja. Dessa forma, de uma tacada só, ele co
                                                     <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system">
                                                         <color key="baseForegroundColor" name="primaryColor"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="likeButtonAction:" destination="jLG-IU-QeE" eventType="touchUpInside" id="bNh-2w-pjA"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -158,6 +161,7 @@ A ideia de Simon é fingir que a corteja. Dessa forma, de uma tacada só, ele co
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="likeButton" destination="CoY-xf-NQ2" id="ut6-uh-dMT"/>
                                             <outlet property="subtitle" destination="Bjk-r4-Tdg" id="CyI-Lf-5rV"/>
                                             <outlet property="synopsis" destination="6qM-jk-e10" id="F3G-Bg-Yf2"/>
                                             <outlet property="title" destination="Cbj-Rh-BXb" id="BeH-3K-xWl"/>

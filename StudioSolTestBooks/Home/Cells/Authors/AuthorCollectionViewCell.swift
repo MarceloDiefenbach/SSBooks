@@ -27,7 +27,7 @@ class AuthorCollectionViewCell: UICollectionViewCell {
     func setCorner() {
         background.layer.cornerRadius = 8
         background.layer.borderColor = UIColor.systemGray2.cgColor
-        background.layer.borderWidth = 0.5
+        background.layer.borderWidth = 1
         coverImage.layer.cornerRadius = 8
     }
     

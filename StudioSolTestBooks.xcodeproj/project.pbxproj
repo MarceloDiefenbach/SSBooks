@@ -166,8 +166,8 @@
 		DF53F4B32908A58E00398A4A /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				DF4A8F632905B34E0098CC52 /* BooksTableViewCell.swift */,
 				DF4A8F652905B35E0098CC52 /* BookCollectionViewCell.swift */,
+				DF4A8F632905B34E0098CC52 /* BooksTableViewCell.swift */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -175,8 +175,8 @@
 		DF53F4B42908A59E00398A4A /* Authors */ = {
 			isa = PBXGroup;
 			children = (
-				DFCDB09329080E8300D9A966 /* AuthorsTableViewCell.swift */,
 				DFCDB0952908108600D9A966 /* AuthorCollectionViewCell.swift */,
+				DFCDB09329080E8300D9A966 /* AuthorsTableViewCell.swift */,
 			);
 			path = Authors;
 			sourceTree = "<group>";

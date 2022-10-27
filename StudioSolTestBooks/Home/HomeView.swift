@@ -54,7 +54,7 @@ class HomeView: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundView = nil;
-        tableView.backgroundColor = UIColor.white
+        tableView.backgroundColor = UIColor(named: "white")
         
         var frame = self.view.bounds
         frame.origin.y = -frame.size.height
