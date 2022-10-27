@@ -14,10 +14,6 @@ class AuthorCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLable: UILabel!
     
-    override class func awakeFromNib() {
-        
-    }
-    
     override func prepareForReuse() {
         coverImage.image = nil
         titleLabel.text = nil

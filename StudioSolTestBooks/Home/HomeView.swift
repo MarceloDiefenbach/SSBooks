@@ -40,6 +40,37 @@ class HomeView: UIViewController {
         topBackground.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         topBackground.layer.shadowOpacity = 0.1
         
+        setupHeader()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.backgroundView = nil;
+        tableView.backgroundColor = UIColor(named: "white")
+        
+        //MARK: - this code put a view with a color diferent of background on top of the table view
+        var frame = self.view.bounds
+        frame.origin.y = -frame.size.height
+        let primary = UIView(frame: frame)
+        primary.tag = 3
+        primary.backgroundColor = UIColor.systemGray6
+        self.tableView.addSubview(primary)
+        
+        let widthConstraint = NSLayoutConstraint(item: primary, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1, constant: 0)
+        let centerX = NSLayoutConstraint(item: primary, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0)
+        
+        NSLayoutConstraint.deactivate(primary.constraints)
+        NSLayoutConstraint.activate([
+            widthConstraint, centerX
+        ])
+        
+    }
+    
+    func setupHeader() {
+        
+        topBackground.roundCorners(corners: [.bottomRight], radius: 32)
+        topBackground.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        topBackground.layer.shadowOpacity = 0.1
+        
         segmentedControlFirst.text = viewModel.segmentedControlFirst
         segmentedControlSecond.text = viewModel.segmentedControlSecond
         
@@ -50,32 +81,9 @@ class HomeView: UIViewController {
         
         segmentedMarkFirst.layer.cornerRadius = segmentedMarkFirst.bounds.height/2
         segmentedMarkSecond.layer.cornerRadius = segmentedMarkSecond.bounds.height/2
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.backgroundView = nil;
-        tableView.backgroundColor = UIColor(named: "white")
-        
-        var frame = self.view.bounds
-        frame.origin.y = -frame.size.height
-        let primary = UIView(frame: frame)
-        primary.tag = 3
-        primary.backgroundColor = UIColor.systemGray6
-        self.tableView.addSubview(primary)
-
-        let widthConstraint = NSLayoutConstraint(item: primary, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1, constant: 0)
-        let centerX = NSLayoutConstraint(item: primary, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0)
-
-        NSLayoutConstraint.deactivate(primary.constraints)
-        NSLayoutConstraint.activate([
-            widthConstraint, centerX
-        ])
-        
     }
     
-    
     //MARK: - gestureRecognizer
-    
     func addActionOnMyBooksSegmentedControl() {
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(self.changeToMyBooks))
         myBooksSegmentedControl.addGestureRecognizer(tapGR)
@@ -110,6 +118,7 @@ class HomeView: UIViewController {
             }
         }
     }
+    
 }
 
 extension HomeView: UITableViewDelegate, UITableViewDataSource {
@@ -120,6 +129,7 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
         } else {
             return 0
         }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -158,33 +168,32 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
             
             return cell
         }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            
             return 386
             
         } else if indexPath.row == 1 {
-            
             return 150
             
         } else if indexPath.row == 2 {
-            
             return 120
             
         } else {
             return 90
         }
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         if indexPath.row > 2 {
             print(viewModel.allBooks[indexPath.row-3])
             performSegue(withIdentifier: "showBookDetails", sender: viewModel.allBooks[indexPath.row-3])
             
         }
+        
     }
     
     func getImageFromAPI (urlString: String, completionHandler: @escaping (UIImage) -> Void) {
@@ -196,19 +205,20 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
                 completionHandler(UIImage(data: image)!)
             }
         }
+        
     }
     
 }
 
 //MARK: - segues
 extension HomeView: BookDetailsDelegate {
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-          if (segue.identifier == "showBookDetails"){
+        if (segue.identifier == "showBookDetails"){
             let displayVC = segue.destination as! BookDetailsViewController
-              displayVC.book = sender as? Book
-          }
-      }
+            displayVC.book = sender as? Book
+        }
+    }
     
     func showBookDetails(book: Book) {
         performSegue(withIdentifier: "showBookDetails", sender: book)

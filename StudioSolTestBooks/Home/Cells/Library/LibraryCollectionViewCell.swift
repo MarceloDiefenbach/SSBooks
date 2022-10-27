@@ -12,8 +12,8 @@ class LibraryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var background: UIView!
     
-    override class func awakeFromNib() {
-        
+    override func prepareForReuse() {
+        label.text = nil
     }
     
     func setLayout() {

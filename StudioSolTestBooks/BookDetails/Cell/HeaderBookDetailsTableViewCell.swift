@@ -28,10 +28,10 @@ class HeaderBookDetailsTableViewCell: UITableViewCell {
     
     @IBAction func backButtonAction(_ sender: Any) {
             self.delegate.back()
+        
     }
     
     func setLayout() {
-        
         getImageFromAPI(urlString: book?.cover ?? "", completionHandler: {(response) in
             self.coverImage.image = response
         })

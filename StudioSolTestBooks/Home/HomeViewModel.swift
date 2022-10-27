@@ -61,10 +61,10 @@ class HomeViewModel: ObservableObject {
                             books.append(book)
                             
                         } else {
-                            fatalError()
+                            fatalError("Error when get author name: HomeViewModel")
                         }
                     } else {
-                        fatalError()
+                        fatalError("Error when get book data: HomeViewModel")
                     }
                 }
                 print(books)
@@ -86,7 +86,6 @@ class HomeViewModel: ObservableObject {
             } receiveValue: { result in
                 
                 guard let dict = result.data.value as? [String: Any] else {
-                    fatalError()
                     return
                 }
                 
@@ -102,7 +101,7 @@ class HomeViewModel: ObservableObject {
                         let author = Author(name: name, picture: picture, booksCount: booksCount)
                         authors.append(author)
                     } else {
-                        fatalError()
+                        fatalError("Error when get author data: HomeViewModel")
                     }
                 }
                 self.authors = authors
@@ -148,10 +147,10 @@ class HomeViewModel: ObservableObject {
                             books.append(book)
                             
                         } else {
-                            fatalError()
+                            fatalError("Error when get author name: HomeViewModel")
                         }
                     } else {
-                        fatalError()
+                        fatalError("Error when get book data: HomeViewModel")
                     }
                 }
                 print(books)

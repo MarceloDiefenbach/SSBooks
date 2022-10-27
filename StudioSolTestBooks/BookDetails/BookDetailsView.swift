@@ -11,10 +11,15 @@ import UIKit
 class BookDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, BookDetailsViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    var book: Book?
     
     @IBAction func swipeBackAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    var book: Book?
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override func viewDidLoad() {
@@ -39,10 +44,6 @@ class BookDetailsViewController: UIViewController, UITableViewDelegate, UITableV
             widthConstraint, centerX
         ])
         
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
